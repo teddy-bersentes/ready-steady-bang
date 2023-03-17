@@ -1,8 +1,10 @@
 import { type inferRouterInputs, type inferRouterOutputs } from "@trpc/server";
-import { httpBatchLink, loggerLink } from "@trpc/client";
-import { type AppRouter } from "~/server/api/root";
+import { httpBatchLink, loggerLink, type TRPCLink } from "@trpc/client";
+import { wsLink, createWSClient } from '@trpc/client/links/wsLink';
+import { type AppRouter } from "~/server/routers/_app";
 import { createTRPCNext } from "@trpc/next";
 import superjson from "superjson";
+
 
 const getBaseUrl = () => {
 	if (typeof window !== "undefined") return ""; // browser should use relative url
@@ -10,52 +12,35 @@ const getBaseUrl = () => {
 	return `http://localhost:${process.env.PORT ?? 3000}`; // dev SSR should use localhost
 };
 
-/** A set of type-safe react-query hooks for your tRPC API. */
+const wsClient = typeof window !== 'undefined' ? createWSClient({
+	url: process.env.WS_URL ?? `ws://localhost:3001`,
+}) : undefined
+
 export const trpc = createTRPCNext<AppRouter>({
 	config() {
-		return {
-			/**
-			 * Transformer used for data de-serialization from the server.
-			 *
-			 * @see https://trpc.io/docs/data-transformers
-			 */
-			transformer: superjson,
+		const links: TRPCLink<AppRouter>[] = [
+			loggerLink({
+				enabled: (opts) =>
+					process.env.NODE_ENV === "development" ||
+					(opts.direction === "down" && opts.result instanceof Error),
+			}),
+			httpBatchLink({
+				url: `${getBaseUrl()}/api/trpc`,
+			})
+		]
 
-			/**
-			 * Links used to determine request flow from client to server.
-			 *
-			 * @see https://trpc.io/docs/links
-			 */
-			links: [
-				loggerLink({
-					enabled: (opts) =>
-						process.env.NODE_ENV === "development" ||
-						(opts.direction === "down" && opts.result instanceof Error),
-				}),
-				httpBatchLink({
-					url: `${getBaseUrl()}/api/trpc`,
-				}),
-			],
+		if (typeof window !== "undefined" && wsClient) {
+			links.push(wsLink<AppRouter>({ client: wsClient }))
+		}
+
+
+		return {
+			transformer: superjson,
+			links: links,
 		};
 	},
-	/**
-	 * Whether tRPC should await queries when server rendering pages.
-	 *
-	 * @see https://trpc.io/docs/nextjs#ssr-boolean-default-false
-	 */
-	ssr: false,
+	ssr: false
 });
 
-/**
- * Inference helper for inputs.
- *
- * @example type HelloInput = RouterInputs['example']['hello']
- */
 export type RouterInputs = inferRouterInputs<AppRouter>;
-
-/**
- * Inference helper for outputs.
- *
- * @example type HelloOutput = RouterOutputs['example']['hello']
- */
 export type RouterOutputs = inferRouterOutputs<AppRouter>;

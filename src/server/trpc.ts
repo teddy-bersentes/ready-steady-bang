@@ -1,5 +1,8 @@
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
+import { type NodeHTTPCreateContextFnOptions } from '@trpc/server/adapters/node-http';
+import { type IncomingMessage } from "http";
 import { prisma } from "~/server/db";
+import type ws from 'ws'
 
 type CreateContextOptions = Record<string, never>;
 
@@ -9,7 +12,8 @@ const createInnerTRPCContext = (_opts: CreateContextOptions) => {
 	};
 };
 
-export const createTRPCContext = (_opts: CreateNextContextOptions) => {
+type ContextParams = CreateNextContextOptions | NodeHTTPCreateContextFnOptions<IncomingMessage, ws>;
+export const createTRPCContext = (_opts: ContextParams) => {
 	return createInnerTRPCContext({});
 };
 
@@ -28,7 +32,7 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
 					error.cause instanceof ZodError ? error.cause.flatten() : null,
 			},
 		};
-	},
+	}
 });
 
 export const createTRPCRouter = t.router;

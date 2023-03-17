@@ -3,11 +3,14 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"build": "next build",
-		"dev": "next dev",
+		"dev": "run-p dev:wss dev:next",
+		"dev:wss": "npx tsx watch ./src/server/devServer.ts",
+		"dev:next": "next dev",
+		"build": "run-s build:next build:wss",
+		"build:next": "NODE_ENV=production next build",
+		"build:wss": "npx tsc",
 		"postinstall": "prisma generate",
-		"lint": "next lint",
-		"start": "next start"
+		"start": "node ./dist/server/prodSever.js"
 	},
 	"dependencies": {
 		"@prisma/client": "^4.9.0",
@@ -16,13 +19,16 @@
 		"@trpc/next": "^10.9.0",
 		"@trpc/react-query": "^10.9.0",
 		"@trpc/server": "^10.9.0",
+		"chalk": "^4.1.2",
 		"clsx": "^1.2.1",
 		"ioredis": "^5.3.1",
+		"module-alias": "^2.2.2",
 		"nanoid": "^4.0.1",
 		"next": "^13.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"superjson": "1.9.1",
+		"ws": "^8.13.0",
 		"zod": "^3.20.6",
 		"zustand": "^4.3.6"
 	},
@@ -32,11 +38,13 @@
 		"@types/prettier": "^2.7.2",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.11",
+		"@types/ws": "^8.5.4",
 		"@typescript-eslint/eslint-plugin": "^5.53.0",
 		"@typescript-eslint/parser": "^5.53.0",
 		"autoprefixer": "^10.4.7",
 		"eslint": "^8.34.0",
 		"eslint-config-next": "^13.2.1",
+		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.14",
 		"prettier": "^2.8.1",
 		"prettier-plugin-tailwindcss": "^0.2.1",
@@ -46,5 +54,8 @@
 	},
 	"ct3aMetadata": {
 		"initVersion": "7.8.0"
+	},
+	"_moduleAliases": {
+		"~": "./dist/"
 	}
 }
