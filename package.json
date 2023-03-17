@@ -8,9 +8,9 @@
 		"dev:next": "next dev",
 		"build": "run-s build:next build:wss",
 		"build:next": "NODE_ENV=production next build",
-		"build:wss": "npx tsc",
+		"build:wss": "npx tsc --project tsconfig.prod.json",
 		"postinstall": "prisma generate",
-		"start": "node ./dist/server/prodSever.js"
+		"start": "node ./dist/server/prodServer.js"
 	},
 	"dependencies": {
 		"@prisma/client": "^4.9.0",
