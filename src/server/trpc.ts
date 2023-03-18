@@ -2,24 +2,22 @@ import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import { type NodeHTTPCreateContextFnOptions } from '@trpc/server/adapters/node-http';
 import { type IncomingMessage } from "http";
 import { prisma } from "~/server/db";
+import { redis, keys, duelIO } from "~/server/redis";
 import type ws from 'ws'
-
-type CreateContextOptions = Record<string, never>;
-
-const createInnerTRPCContext = (_opts: CreateContextOptions) => {
-	return {
-		prisma
-	};
-};
+import superjson from "superjson";
+import { initTRPC } from "@trpc/server";
+import { ZodError } from "zod";
 
 type ContextParams = CreateNextContextOptions | NodeHTTPCreateContextFnOptions<IncomingMessage, ws>;
 export const createTRPCContext = (_opts: ContextParams) => {
-	return createInnerTRPCContext({});
+	return {
+		prisma,
+		redis,
+		keys,
+		duelIO,
+		transformer: superjson
+	};
 };
-
-import { initTRPC } from "@trpc/server";
-import superjson from "superjson";
-import { ZodError } from "zod";
 
 const t = initTRPC.context<typeof createTRPCContext>().create({
 	transformer: superjson,

@@ -4,6 +4,8 @@ import { uniFont } from "~/utils/fonts";
 import clsx from 'clsx'
 import "~/styles/globals.css";
 import Head from "next/head";
+import { AssetContainer } from "~/components/AssetContainer";
+import { PersistContainer } from "~/components/PersistContainer";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -28,7 +30,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Component {...pageProps} />
+			<AssetContainer>
+				<PersistContainer>
+					<Component {...pageProps} />
+				</PersistContainer>
+			</AssetContainer>
 		</main>
 	)
 }

@@ -13,6 +13,8 @@
 		"start": "node ./dist/server/prodServer.js"
 	},
 	"dependencies": {
+		"@headlessui/react": "^1.7.13",
+		"@pixi/react": "^7.0.3",
 		"@prisma/client": "^4.9.0",
 		"@tanstack/react-query": "^4.20.2",
 		"@trpc/client": "^10.9.0",
@@ -23,11 +25,13 @@
 		"clsx": "^1.2.1",
 		"ioredis": "^5.3.1",
 		"module-alias": "^2.2.2",
-		"nanoid": "^4.0.1",
+		"nanoid": "^3.0.0",
 		"next": "^13.2.1",
+		"pixi.js": "^7.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"superjson": "1.9.1",
+		"use-sound": "^4.0.1",
 		"ws": "^8.13.0",
 		"zod": "^3.20.6",
 		"zustand": "^4.3.6"
