@@ -6,7 +6,7 @@ This project is currently in development/pre-alpha stage and is not meant to inf
 
 ## Play the Game
 
-You can play the game by visiting [https://ready-steady-bang.onrender.com](https://your-website-url.com/).
+You can play the game by visiting [https://ready-steady-bang.onrender.com](https://ready-steady-bang.onrender.com).
 
 ## Features
 
