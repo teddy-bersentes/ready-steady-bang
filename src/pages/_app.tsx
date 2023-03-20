@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta itemProp="description" content="See who's the fastest gun in the west" />
 				<meta itemProp="image" content="https://ucarecdn.com/4ff39193-0ebd-4ff0-9a83-982a1a7f220e/og.png" />
 
-				<meta property="og:url" content="https://ready-steady-bang.onrender.com/test" />
+				<meta property="og:url" content="https://ready-steady-bang.onrender.com/" />
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content="ready steady bang" />
 				<meta property="og:description" content="See who's the fastest gun in the west" />

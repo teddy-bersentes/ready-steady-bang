@@ -1,0 +1,1049 @@
+{
+	"frames": {
+		"BloodSplat_00001.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 29,
+				"h": 29
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 24,
+				"y": 24,
+				"w": 29,
+				"h": 29
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00002.png": {
+			"frame": {
+				"x": 32,
+				"y": 1,
+				"w": 36,
+				"h": 37
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 21,
+				"y": 20,
+				"w": 36,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00003.png": {
+			"frame": {
+				"x": 71,
+				"y": 1,
+				"w": 56,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 12,
+				"y": 12,
+				"w": 56,
+				"h": 48
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00004.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00005.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00006.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00007.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00008.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00009.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00010.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00011.png": {
+			"frame": {
+				"x": 1,
+				"y": 39,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00012.png": {
+			"frame": {
+				"x": 62,
+				"y": 51,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00013.png": {
+			"frame": {
+				"x": 1,
+				"y": 95,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00014.png": {
+			"frame": {
+				"x": 62,
+				"y": 107,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00015.png": {
+			"frame": {
+				"x": 1,
+				"y": 151,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00016.png": {
+			"frame": {
+				"x": 62,
+				"y": 163,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00017.png": {
+			"frame": {
+				"x": 1,
+				"y": 207,
+				"w": 59,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00018.png": {
+			"frame": {
+				"x": 62,
+				"y": 219,
+				"w": 59,
+				"h": 55
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 55
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00019.png": {
+			"frame": {
+				"x": 1,
+				"y": 263,
+				"w": 59,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00020.png": {
+			"frame": {
+				"x": 62,
+				"y": 276,
+				"w": 59,
+				"h": 58
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 58
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00021.png": {
+			"frame": {
+				"x": 1,
+				"y": 322,
+				"w": 59,
+				"h": 59
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 59
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00022.png": {
+			"frame": {
+				"x": 62,
+				"y": 336,
+				"w": 59,
+				"h": 60
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 60
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00023.png": {
+			"frame": {
+				"x": 1,
+				"y": 383,
+				"w": 59,
+				"h": 60
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 60
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00024.png": {
+			"frame": {
+				"x": 62,
+				"y": 397,
+				"w": 59,
+				"h": 61
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 61
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00025.png": {
+			"frame": {
+				"x": 1,
+				"y": 445,
+				"w": 59,
+				"h": 62
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 62
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00026.png": {
+			"frame": {
+				"x": 62,
+				"y": 458,
+				"w": 59,
+				"h": 63
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 63
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00027.png": {
+			"frame": {
+				"x": 1,
+				"y": 509,
+				"w": 59,
+				"h": 63
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 63
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00028.png": {
+			"frame": {
+				"x": 62,
+				"y": 519,
+				"w": 59,
+				"h": 64
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 64
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00029.png": {
+			"frame": {
+				"x": 1,
+				"y": 574,
+				"w": 59,
+				"h": 64
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 64
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00030.png": {
+			"frame": {
+				"x": 62,
+				"y": 580,
+				"w": 59,
+				"h": 64
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 64
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00031.png": {
+			"frame": {
+				"x": 1,
+				"y": 641,
+				"w": 59,
+				"h": 65
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 65
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00032.png": {
+			"frame": {
+				"x": 68,
+				"y": 641,
+				"w": 59,
+				"h": 65
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 65
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00033.png": {
+			"frame": {
+				"x": 1,
+				"y": 702,
+				"w": 59,
+				"h": 65
+			},
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 65
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00034.png": {
+			"frame": {
+				"x": 68,
+				"y": 708,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00035.png": {
+			"frame": {
+				"x": 1,
+				"y": 763,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00036.png": {
+			"frame": {
+				"x": 62,
+				"y": 776,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00037.png": {
+			"frame": {
+				"x": 1,
+				"y": 831,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00038.png": {
+			"frame": {
+				"x": 62,
+				"y": 844,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00039.png": {
+			"frame": {
+				"x": 1,
+				"y": 899,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00040.png": {
+			"frame": {
+				"x": 62,
+				"y": 912,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00041.png": {
+			"frame": {
+				"x": 1,
+				"y": 967,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00042.png": {
+			"frame": {
+				"x": 62,
+				"y": 980,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00043.png": {
+			"frame": {
+				"x": 1,
+				"y": 1035,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00044.png": {
+			"frame": {
+				"x": 62,
+				"y": 1048,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00045.png": {
+			"frame": {
+				"x": 1,
+				"y": 1103,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00046.png": {
+			"frame": {
+				"x": 62,
+				"y": 1116,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00047.png": {
+			"frame": {
+				"x": 1,
+				"y": 1171,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00048.png": {
+			"frame": {
+				"x": 62,
+				"y": 1184,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		},
+		"BloodSplat_00049.png": {
+			"frame": {
+				"x": 1,
+				"y": 1239,
+				"w": 59,
+				"h": 66
+			},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {
+				"x": 11,
+				"y": 11,
+				"w": 59,
+				"h": 66
+			},
+			"sourceSize": {
+				"w": 78,
+				"h": 77
+			}
+		}
+	},
+	"animations": {
+		"blood": [
+			"BloodSplat_00001.png",
+			"BloodSplat_00002.png",
+			"BloodSplat_00003.png",
+			"BloodSplat_00004.png",
+			"BloodSplat_00005.png",
+			"BloodSplat_00006.png",
+			"BloodSplat_00007.png",
+			"BloodSplat_00008.png",
+			"BloodSplat_00009.png",
+			"BloodSplat_00010.png",
+			"BloodSplat_00011.png",
+			"BloodSplat_00012.png",
+			"BloodSplat_00013.png",
+			"BloodSplat_00014.png",
+			"BloodSplat_00015.png",
+			"BloodSplat_00016.png",
+			"BloodSplat_00017.png",
+			"BloodSplat_00018.png",
+			"BloodSplat_00019.png",
+			"BloodSplat_00020.png",
+			"BloodSplat_00021.png",
+			"BloodSplat_00022.png",
+			"BloodSplat_00023.png",
+			"BloodSplat_00024.png",
+			"BloodSplat_00025.png",
+			"BloodSplat_00026.png",
+			"BloodSplat_00027.png",
+			"BloodSplat_00028.png",
+			"BloodSplat_00029.png",
+			"BloodSplat_00030.png",
+			"BloodSplat_00031.png",
+			"BloodSplat_00032.png",
+			"BloodSplat_00033.png",
+			"BloodSplat_00034.png",
+			"BloodSplat_00035.png",
+			"BloodSplat_00036.png",
+			"BloodSplat_00037.png",
+			"BloodSplat_00038.png",
+			"BloodSplat_00039.png",
+			"BloodSplat_00040.png",
+			"BloodSplat_00041.png",
+			"BloodSplat_00042.png",
+			"BloodSplat_00043.png",
+			"BloodSplat_00044.png",
+			"BloodSplat_00045.png",
+			"BloodSplat_00046.png",
+			"BloodSplat_00047.png",
+			"BloodSplat_00048.png",
+			"BloodSplat_00049.png"
+		]
+	},
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"image": "blood.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 128,
+			"h": 1306
+		},
+		"scale": "1",
+		"smartupdate": "$TexturePacker:SmartUpdate:aab24c2bb9344e32383704ffb523f643:0465d25a06e15024f55733dcfec5f70c:8f9cd4ff13c68004178d68678c9928f0$"
+	}
+}

@@ -16,11 +16,12 @@ export function RegisterPopup({ isOpen, onClose: closeModal, onSubmit }: Props) 
 	const input = useRef<HTMLInputElement>(null)
 	const setUserId = useUserStore(state => state.setUserId)
 	const [username, setUsername] = useState(randomWesternUsername())
+
 	const { mutate: create, status } = trpc.user.register.useMutation({
 		onSuccess: data => {
 			setUserId(data.id)
 			onSubmit && onSubmit()
-			// The subscription should close the modal
+			// The subscription can close the modal alternatively to the onSubmit callback
 		}
 	})
 

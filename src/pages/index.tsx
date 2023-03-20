@@ -4,6 +4,8 @@ import { useUserStore } from "~/lib/stores/user";
 import { trpc } from "~/utils/trpc";
 import { Button } from "~/components/Button";
 import { RegisterPopup } from "~/components/RegisterPopup";
+import { Stage } from "@pixi/react";
+import { MenuAnimation } from "~/components/MenuAnimation";
 
 export default function Index() {
 	const router = useRouter()
@@ -42,14 +44,23 @@ export default function Index() {
 		const userId = await checkForUser()
 		if (status !== 'idle') return
 		createPrivateGame({ userId })
-
 	}
 
 	return (
 		<main className='flex flex-col items-center justify-center w-full h-screen bg-cowboy-gray-50'>
-			<h1 className='font-medium tracking-[-2.5%] text-cowboy-gray-800 text-2xl mb-8'>
+			<h1 className='font-medium tracking-[-2.5%] text-cowboy-gray-800 text-2xl'>
 				ready steady bang
 			</h1>
+
+			<Stage
+				raf={false}
+				width={375}
+				height={256}
+				className='my-8'
+				options={{ backgroundColor: 0xFAFAFA }}
+			>
+				<MenuAnimation />
+			</Stage>
 
 			<Button disabled={status === 'loading'} onClick={onLobby} className='mb-4'>
 				public lobby

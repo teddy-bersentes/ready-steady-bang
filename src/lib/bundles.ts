@@ -1,28 +1,43 @@
 import type { ResolverManifest } from 'pixi.js'
 
 export enum Bundle {
-	MENU_SCREEN = 'menu_screen',
 	GAME_SCREEN = 'game_screen'
 }
 
 export const bundleManifest: ResolverManifest = {
 	bundles: [
 		{
-			name: Bundle.MENU_SCREEN,
+			name: Bundle.GAME_SCREEN,
 			assets: [
 				{
-					name: 'menu_animation_part_1',
-					srcs: '/animations/menu_1.json'
+					name: 'blood',
+					srcs: '/animations/blood.json'
 				},
 				{
-					name: 'menu_animation_part_2',
-					srcs: '/animations/menu_2.json'
+					name: 'bullet_hole',
+					srcs: '/animations/bullet_hole.json'
+				},
+				{
+					name: 'summon',
+					srcs: '/animations/summon.json'
+				},
+				{
+					name: 'fire',
+					srcs: '/animations/fire.json',
+				},
+				{
+					name: 'fear_start',
+					srcs: '/animations/fear_start.json',
+				},
+				{
+					name: 'fear_loop',
+					srcs: '/animations/fear_loop.json',
+				},
+				{
+					name: 'death',
+					srcs: '/animations/death.json',
 				}
 			]
-		},
-		{
-			name: Bundle.GAME_SCREEN,
-			assets: []
 		}
 	]
 }
