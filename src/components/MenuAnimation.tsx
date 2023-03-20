@@ -33,7 +33,7 @@ export function MenuAnimation() {
 				<Sprite
 					texture={previewAsset}
 					scale={0.5}
-					x={(stage.view.width / 2) - (previewAsset.width / 4)}
+					x={(375 / 2) - (previewAsset.width / 4)}
 					y={0}
 				/>
 			)}
@@ -43,7 +43,7 @@ export function MenuAnimation() {
 					textures={menuAnimation}
 					name='menu'
 					scale={0.5}
-					x={(stage.view.width / 2) - (previewAsset.width / 4)}
+					x={(375 / 2) - (previewAsset.width / 4)}
 					y={0}
 					animationSpeed={22 / 60}
 					isPlaying
