@@ -3,7 +3,7 @@ import type { Texture, Resource } from '@pixi/core'
 import { useApp, AnimatedSprite, Sprite } from '@pixi/react'
 import { Assets } from '@pixi/assets'
 import type { Spritesheet } from '@pixi/spritesheet'
-import { getFrames } from '~/utils/frames'
+import { getFrames } from '~/utils/animations'
 
 export function MenuAnimation() {
 	const stage = useApp()

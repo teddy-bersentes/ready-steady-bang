@@ -3,8 +3,8 @@ import { TRPCError } from "@trpc/server"
 import { observable } from "@trpc/server/observable"
 import { background } from "~/server/utils/background"
 import { delay } from "~/server/utils/delay"
-import { z } from "zod"
 import { duelIO, type Duel, type EndData } from "~/server/redis"
+import { z } from "zod"
 
 export const duelRouter = createTRPCRouter({
 	readyForDuel: publicProcedure

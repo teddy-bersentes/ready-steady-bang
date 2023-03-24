@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { bundleManifest } from "~/lib/bundles";
+import { bundleManifest } from "~/utils/assets";
 import { Assets } from "@pixi/assets";
 import { spritesheetAsset } from '@pixi/spritesheet'
 import { extensions } from "@pixi/extensions";

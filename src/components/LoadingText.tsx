@@ -1,44 +1,30 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Dots } from "~/components/Dots";
 
 export function LoadingText() {
 	return (
 		<motion.div
 			initial={{
-				opacity: 0,
 				y: -14,
+				opacity: 0,
 			}}
 			animate={{
-				opacity: 1,
 				y: 0,
+				opacity: 1,
 				transition: {
 					duration: 0.3,
 				}
 			}}
 			exit={{
-				opacity: 0,
-				y: 14
+				y: 14,
+				opacity: 0
 			}}
 			transition={{ duration: 0.3 }}
 			className='absolute flex flex-col justify-center items-center'
 		>
 			<p className='text-base tracking-wide text-cowboy-gray-600'>
-				Loading<DotText />
+				Loading<Dots />
 			</p>
 		</motion.div>
 	)
-}
-
-function DotText() {
-	const [text, setText] = useState<string>('')
-
-	useEffect(() => {
-		const id = setInterval(
-			() => setText(prev => prev.length === 3 ? '' : prev + '.'),
-			300
-		)
-		return () => clearInterval(id)
-	}, [])
-
-	return <span>{text}</span>
 }

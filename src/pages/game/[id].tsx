@@ -3,8 +3,9 @@ import { RegisterPopup } from "~/components/RegisterPopup";
 import { useRouter } from "next/router";
 import { useUserStore } from "~/lib/stores/user";
 import { GameLoader } from "~/components/GameLoader";
+import { Toaster } from "react-hot-toast"
+import { Bundle } from "~/utils/assets";
 import { Assets } from "@pixi/assets"
-import { Bundle } from "~/lib/bundles";
 
 export default function Game() {
 	const router = useRouter()
@@ -28,6 +29,19 @@ export default function Game() {
 				isOpen={userPopup}
 				onClose={() => setUserPopup(false)}
 				onSubmit={() => setUserPopup(false)}
+			/>
+
+			<Toaster
+				position='top-center'
+				toastOptions={{
+					success: {
+						iconTheme: {
+							primary: '#7F7F7F',
+							secondary: '#FFFFFF'
+						}
+					},
+					duration: 2000
+				}}
 			/>
 		</div>
 	)

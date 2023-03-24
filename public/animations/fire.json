@@ -142,7 +142,7 @@
 		}
 	},
 	"animations": {
-		"fire_1": [
+		"fire": [
 			"CB_PlayerShoot_00001.png",
 			"CB_PlayerShoot_00002.png",
 			"CB_PlayerShoot_00003.png",

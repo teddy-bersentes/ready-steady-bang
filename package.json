@@ -31,6 +31,7 @@
 		"pixi.js": "^7.1.4",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-hot-toast": "^2.4.0",
 		"superjson": "1.9.1",
 		"use-sound": "^4.0.1",
 		"ws": "^8.13.0",
