@@ -3,7 +3,7 @@ import { Cover } from "./Cover"
 import { useGameStore, gameStoreActions as actions } from "~/lib/stores/game"
 import { shallow } from "zustand/shallow"
 import { trpc } from "~/utils/trpc"
-import { useCallback } from "react"
+import { useCallback, useEffect } from "react"
 import { TimerMarkers } from "./TimerMarkers"
 import { Cowboy } from "../Cowboy/Cowboy"
 import { Stage } from "@pixi/react"
@@ -83,13 +83,24 @@ export function GameView({ game, userId }: Props) {
 		}
 
 		if (playStatus.type === 'done') {
-			//
+			// TODO: Go to next game
 		}
 
 		if (playStatus.type === 'idle') {
 			readyMutation.mutate({ gameId, userId })
 		}
 	}, [playStatus, gameId, userId, readyMutation, fireMutation])
+
+	const handleKeyDown = useCallback((e: KeyboardEvent) => {
+		if (e.code === 'Space') {
+			handleInteraction()
+		}
+	}, [handleInteraction])
+
+	useEffect(() => {
+		window.addEventListener('keydown', handleKeyDown)
+		return () => window.removeEventListener('keydown', handleKeyDown)
+	}, [handleKeyDown])
 
 	return (
 		<>
@@ -101,7 +112,7 @@ export function GameView({ game, userId }: Props) {
 					height={256}
 					options={{ backgroundColor: 0xFAFAFA }}
 				>
-					<Cowboy status={'drawing'} flipped />
+					<Cowboy status={cowboyStates.opponent} flipped />
 				</Stage>
 
 				<Stage
@@ -109,7 +120,7 @@ export function GameView({ game, userId }: Props) {
 					height={256}
 					options={{ backgroundColor: 0xFAFAFA }}
 				>
-					<Cowboy status={'afraid'} />
+					<Cowboy status={cowboyStates.self} />
 				</Stage>
 			</div>
 
