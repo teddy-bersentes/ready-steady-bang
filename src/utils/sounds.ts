@@ -19,8 +19,12 @@ export const useSoundLoader = (onLoad: Params) => {
 		onload: () => setLoadedKeys((keys) => [...keys, "bang"])
 	})
 
+	useSound("/sounds/gunshot.mp3", {
+		onload: () => setLoadedKeys((keys) => [...keys, "gunshot"])
+	})
+
 	useEffect(() => {
-		if (loadedKeys.length === 3) {
+		if (loadedKeys.length === 4) {
 			onLoad();
 		}
 	}, [loadedKeys, onLoad])

@@ -3,18 +3,26 @@ import { Cover } from "./Cover"
 import { useGameStore, gameStoreActions as actions } from "~/lib/stores/game"
 import { shallow } from "zustand/shallow"
 import { trpc } from "~/utils/trpc"
-import { useCallback, useEffect } from "react"
+import { useCallback } from "react"
 import { TimerMarkers } from "./TimerMarkers"
-import { Cowboy } from "../Cowboy/Cowboy"
+import { Cowboy } from "~/components/Cowboy"
 import { Stage } from "@pixi/react"
+import { useSpaceBarListener } from "~/utils/keyboard"
+import { IdleText } from "./IdleText"
+import { ReadyText } from "./ReadyText"
+import { AnimatePresence } from "framer-motion"
+import useSound from "use-sound"
+import { ResultText } from "./ResultText"
 
 type Props = {
 	game: Game
 	userId: string
 }
 
+
 export function GameView({ game, userId }: Props) {
 	const gameId = game.id
+	const [playFireSound] = useSound('/sounds/gunshot.mp3')
 	const isCovering = useGameStore(state => state.isCovering)
 	const playStatus = useGameStore(state => state.playStatus, shallow)
 	const cowboyStates = useGameStore(
@@ -38,7 +46,10 @@ export function GameView({ game, userId }: Props) {
 
 	const fireMutation = trpc.duel.fire.useMutation({
 		onMutate: () => actions.setCowboys({ self: 'drawing' }),
-		onSuccess: () => actions.setCowboys({ self: 'firing' })
+		onSuccess: () => {
+			actions.setCowboys({ self: 'firing' })
+			playFireSound()
+		}
 	})
 
 	trpc.duel.onStart.useSubscription(
@@ -61,9 +72,7 @@ export function GameView({ game, userId }: Props) {
 					duel: data.duel,
 					result: data.result
 				})
-
 				const { result } = data
-
 				if (result.type === 'win') {
 					actions.setCowboys({
 						self: result.winnerId !== userId ? 'dead' : undefined,
@@ -75,7 +84,21 @@ export function GameView({ game, userId }: Props) {
 		}
 	)
 
+	trpc.duel.onFire.useSubscription(
+		{ gameId, userId },
+		{
+			onData: () => {
+				actions.setCowboys({ opponent: 'firing' })
+				playFireSound()
+			}
+		}
+	)
+
 	const handleInteraction = useCallback(() => {
+		if (playStatus.type === 'idle') {
+			readyMutation.mutate({ gameId, userId })
+		}
+
 		if (playStatus.type === 'playing') {
 			if (fireMutation.status !== 'idle') return
 			const time = Date.now()
@@ -83,24 +106,18 @@ export function GameView({ game, userId }: Props) {
 		}
 
 		if (playStatus.type === 'done') {
-			// TODO: Go to next game
-		}
-
-		if (playStatus.type === 'idle') {
-			readyMutation.mutate({ gameId, userId })
+			actions.coverScreen()
+			// We want to wait for the cover animation to finish (300ms + 100ms padding)
+			setTimeout(() => {
+				actions.reset()
+				fireMutation.reset()
+				readyMutation.reset()
+				actions.uncoverScreen()
+			}, 400)
 		}
 	}, [playStatus, gameId, userId, readyMutation, fireMutation])
 
-	const handleKeyDown = useCallback((e: KeyboardEvent) => {
-		if (e.code === 'Space') {
-			handleInteraction()
-		}
-	}, [handleInteraction])
-
-	useEffect(() => {
-		window.addEventListener('keydown', handleKeyDown)
-		return () => window.removeEventListener('keydown', handleKeyDown)
-	}, [handleKeyDown])
+	useSpaceBarListener(handleInteraction)
 
 	return (
 		<>
@@ -127,6 +144,29 @@ export function GameView({ game, userId }: Props) {
 			{playStatus.type === 'playing' && (
 				<TimerMarkers duel={playStatus.duel} />
 			)}
+
+			<AnimatePresence>
+				{playStatus.type === 'idle' && (
+					<IdleText onReady={handleInteraction} />
+				)}
+			</AnimatePresence>
+
+			<AnimatePresence>
+				{playStatus.type === 'ready' && (
+					<ReadyText />
+				)}
+			</AnimatePresence>
+
+			<AnimatePresence>
+				{playStatus.type === 'done' && (
+					<ResultText
+						result={playStatus.result}
+						duel={playStatus.duel}
+						userId={userId}
+						onRematch={handleInteraction}
+					/>
+				)}
+			</AnimatePresence>
 		</>
 	)
 }

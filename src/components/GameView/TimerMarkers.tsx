@@ -5,6 +5,7 @@ import clsx from "clsx"
 import type { Duel } from "~/server/redis"
 import Image from "next/image"
 import bangImg from "../../../public/images/bang.png"
+import { useGameStore } from "~/lib/stores/game"
 
 type Props = {
 	duel: Duel
@@ -25,6 +26,7 @@ export function TimerMarkers({ duel }: Props) {
 	useEffect(() => {
 		const readyDist = ready - Date.now()
 		readyDist > 0 && setTimeout(() => {
+			if (!gameIsActive()) return
 			setStatus('ready')
 			setReadyVisible(true)
 			playReadySound()
@@ -32,6 +34,7 @@ export function TimerMarkers({ duel }: Props) {
 
 		const steadyDist = steady - Date.now()
 		steadyDist > 0 && setTimeout(() => {
+			if (!gameIsActive()) return
 			setStatus('steady')
 			setSteadyVisible(true)
 			playSteadySound()
@@ -39,6 +42,7 @@ export function TimerMarkers({ duel }: Props) {
 
 		const bangDist = bang - Date.now()
 		bangDist > 0 && setTimeout(() => {
+			if (!gameIsActive()) return
 			setStatus('bang')
 			playBangSound()
 		}, bangDist)
@@ -108,3 +112,5 @@ export function TimerMarkers({ duel }: Props) {
 		</div>
 	)
 }
+
+const gameIsActive = (): boolean => useGameStore.getState().playStatus.type === 'playing'

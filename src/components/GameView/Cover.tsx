@@ -9,7 +9,7 @@ export function Cover({ isEnabled }: Props) {
 	return (
 		<motion.div
 			className={clsx(
-				'absolute w-screen h-[100svh] bg-cowboy-gray-50',
+				'absolute w-screen h-[100svh] bg-cowboy-gray-50 z-50',
 				isEnabled ? 'pointer-events-auto' : 'pointer-events-none'
 			)}
 			initial={{ opacity: 0 }}
