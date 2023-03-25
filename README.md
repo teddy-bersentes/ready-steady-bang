@@ -49,8 +49,9 @@ yarn install
 3. Create a `.env` file in the project root with the following environment variables:
 
 ```makefile
+DATABASE_URL=your_database_url
 REDIS_URL=your_redis_url
-DB_URL=your_database_url
+NEXT_PUBLIC_WS_URL=your_websocket_server_url
 ```
 
 4. Run the development server:
