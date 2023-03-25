@@ -6,7 +6,7 @@ import { createTRPCNext } from "@trpc/next";
 import superjson from "superjson";
 
 const client = typeof window !== 'undefined' ?
-	createWSClient({ url: process.env.WS_URL ?? `ws://localhost:3001` }) :
+	createWSClient({ url: process.env.NEXT_PUBLIC_WS_URL ?? `ws://localhost:3001` }) :
 	undefined
 
 export const trpc = createTRPCNext<AppRouter>({
