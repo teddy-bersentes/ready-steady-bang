@@ -5,7 +5,7 @@ import clsx from "clsx"
 import type { Duel } from "~/server/redis"
 import Image from "next/image"
 import bangImg from "../../../public/images/bang.png"
-import { useGameStore } from "~/lib/stores/game"
+import { gameIsActive } from "~/utils/game"
 
 type Props = {
 	duel: Duel
@@ -112,5 +112,3 @@ export function TimerMarkers({ duel }: Props) {
 		</div>
 	)
 }
-
-const gameIsActive = (): boolean => useGameStore.getState().playStatus.type === 'playing'

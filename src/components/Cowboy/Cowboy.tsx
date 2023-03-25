@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useEffect } from "react";
 import { Transform } from "@pixi/math";
 import { type PixiRef, type Sprite, useTick, Container, useApp } from "@pixi/react";
 import type { CowboyStatus } from "~/lib/stores/game";
@@ -7,6 +7,7 @@ import { CowboyAnimationDrawing } from "./CowboyAnimationDrawing";
 import { CowboyAnimationFiring } from "./CowboyAnimationFiring";
 import { CowboyAnimationDead } from "./CowboyAnimationDead";
 import { CowboyAnimationAfraid } from "./CowboyAnimationAfraid";
+import { GunshotAnimation } from "./GunshotAnimation";
 
 const ROTATION_LIMIT = 0.75
 
@@ -16,9 +17,10 @@ type Props = {
 	status: CowboyStatus
 	flipped?: boolean
 	hidden?: boolean
+	missedBullet?: boolean
 }
 
-export function Cowboy({ status, flipped, hidden }: Props) {
+export function Cowboy({ status, flipped, hidden, missedBullet }: Props) {
 	const stage = useApp()
 	const containerRef = useRef<ContainerRef>(null)
 	const armRef = useRef<SpriteRef>(null)
@@ -47,6 +49,9 @@ export function Cowboy({ status, flipped, hidden }: Props) {
 		}
 	})
 
+	// This is a hack to prevent the black flicker of the stage initializing.
+	// You also have to make sure `raf` is set to `false` in the `Stage` component.
+	useEffect(() => stage.ticker.start(), [stage.ticker])
 
 	return (
 		<Container
@@ -59,6 +64,7 @@ export function Cowboy({ status, flipped, hidden }: Props) {
 			{status === 'firing' && <CowboyAnimationFiring />}
 			{status === 'dead' && <CowboyAnimationDead />}
 			{status === 'afraid' && <CowboyAnimationAfraid />}
+			{missedBullet && <GunshotAnimation />}
 		</Container>
 	)
 }

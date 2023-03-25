@@ -36,6 +36,8 @@ type State = {
 	isCovering: boolean,
 	cowboySelf: CowboyStatus,
 	cowboyOpponent: CowboyStatus,
+	missedSelf: boolean,
+	missedOpponent: boolean
 }
 
 export const useGameStore = create<State>()(
@@ -43,7 +45,9 @@ export const useGameStore = create<State>()(
 		playStatus: { type: 'idle' },
 		isCovering: false,
 		cowboySelf: null,
-		cowboyOpponent: null
+		cowboyOpponent: null,
+		missedSelf: false,
+		missedOpponent: false
 	})
 )
 
@@ -63,10 +67,29 @@ export const gameStoreActions = {
 	coverScreen: () => useGameStore.setState({ isCovering: true }),
 	uncoverScreen: () => useGameStore.setState({ isCovering: false }),
 
+	setMissed: (input: { self?: boolean, opponent?: boolean }) => useGameStore.setState({
+		missedSelf: input.self !== undefined
+			? input.self :
+			useGameStore.getState().missedSelf,
+		missedOpponent: input.opponent !== undefined
+			? input.opponent :
+			useGameStore.getState().missedOpponent
+	}),
+
+	scareCowboy: (input: 'self' | 'opponent') => {
+		const state = useGameStore.getState()
+		if (state.playStatus.type !== 'playing') return
+		useGameStore.setState({
+			[input === 'self' ? 'cowboySelf' : 'cowboyOpponent']: 'afraid',
+		})
+	},
+
 	reset: () => useGameStore.setState({
 		isCovering: false,
 		playStatus: { type: 'idle' },
 		cowboySelf: null,
-		cowboyOpponent: null
+		cowboyOpponent: null,
+		missedSelf: false,
+		missedOpponent: false
 	})
 }

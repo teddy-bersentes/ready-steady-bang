@@ -19,48 +19,20 @@ export enum TextureName {
 	COWBOY_BODY = 'cowboy-body'
 }
 
+const gameBundleAssets: Record<AnimationName | TextureName, string> = {
+	[AnimationName.BLOOD]: '/animations/blood.json',
+	[AnimationName.BULLET_HOLE]: '/animations/bullet_hole.json',
+	[AnimationName.SUMMON]: '/animations/summon.json',
+	[AnimationName.FIRE]: '/animations/fire.json',
+	[AnimationName.FEAR_START]: '/animations/fear_start.json',
+	[AnimationName.FEAR_LOOP]: '/animations/fear_loop.json',
+	[AnimationName.DEATH]: '/animations/death.json',
+	[TextureName.COWBOY_ARM]: '/images/cowboy-arm.png',
+	[TextureName.COWBOY_BODY]: '/images/cowboy-body.png'
+}
+
 export const bundleManifest: ResolverManifest = {
 	bundles: [
-		{
-			name: Bundle.GAME_SCREEN,
-			assets: [
-				{
-					name: AnimationName.BLOOD,
-					srcs: '/animations/blood.json'
-				},
-				{
-					name: AnimationName.BULLET_HOLE,
-					srcs: '/animations/bullet_hole.json'
-				},
-				{
-					name: AnimationName.SUMMON,
-					srcs: '/animations/summon.json'
-				},
-				{
-					name: AnimationName.FIRE,
-					srcs: '/animations/fire.json'
-				},
-				{
-					name: AnimationName.FEAR_START,
-					srcs: '/animations/fear_start.json'
-				},
-				{
-					name: AnimationName.FEAR_LOOP,
-					srcs: '/animations/fear_loop.json'
-				},
-				{
-					name: AnimationName.DEATH,
-					srcs: '/animations/death.json'
-				},
-				{
-					name: TextureName.COWBOY_ARM,
-					srcs: '/images/cowboy-arm.png'
-				},
-				{
-					name: TextureName.COWBOY_BODY,
-					srcs: '/images/cowboy-body.png'
-				}
-			]
-		}
+		{ name: Bundle.GAME_SCREEN, assets: gameBundleAssets }
 	]
 }
