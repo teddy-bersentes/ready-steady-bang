@@ -1,5 +1,7 @@
 # Ready Steady Bang Online
 
+![hero_image](https://ucarecdn.com/4ff39193-0ebd-4ff0-9a83-982a1a7f220e/og.png)
+
 Welcome to the GitHub repository of the online fan-made spin-off of the popular mobile game, [Ready Steady Bang](https://apps.apple.com/us/app/ready-steady-bang/id447588618)! This is a free-to-play web version that brings the fast-paced, quick-fire duelling experience to your browser. It's a great way to enjoy the game with friends or challenge other players from around the world.
 
 This project is currently in development/pre-alpha stage and is not meant to infringe on any rights of the original creators ([Animade Studio](https://animade.tv/projects/cowboy-games)).
