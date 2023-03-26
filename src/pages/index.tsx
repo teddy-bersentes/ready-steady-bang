@@ -62,7 +62,7 @@ export default function Index() {
 				<MenuAnimation />
 			</Stage>
 
-			<Button disabled={status === 'loading'} onClick={onLobby} className='mb-4'>
+			<Button disabled onClick={onLobby} className='mb-4 opacity-60'>
 				public lobby
 			</Button>
 

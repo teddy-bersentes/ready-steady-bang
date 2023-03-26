@@ -22,7 +22,7 @@ type Props = {
 	userId: string
 }
 
-const COOLDOWN_TIME = 1000
+// const COOLDOWN_TIME = 1000
 const MISS_DELAY = 1000
 
 export function GameView({ game, userId }: Props) {
