@@ -23,7 +23,7 @@ export default function Game() {
 	}, [])
 
 	return (
-		<div className='relative flex items-center justify-center w-screen h-[100svh] bg-cowboy-gray-50'>
+		<div className='relative flex items-center justify-center w-screen h-[100svh] bg-cowboy-gray-50 touch-none'>
 			{userId && gameId && <GameLoader userId={userId} gameId={gameId} />}
 			<RegisterPopup
 				isOpen={userPopup}

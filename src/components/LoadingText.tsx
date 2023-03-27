@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Dots } from "~/components/Dots";
 
-export function LoadingText() {
+type Props = {
+	delay?: number
+}
+
+export function LoadingText({ delay }: Props) {
 	return (
 		<motion.div
 			initial={{
@@ -19,7 +23,10 @@ export function LoadingText() {
 				y: 14,
 				opacity: 0
 			}}
-			transition={{ duration: 0.3 }}
+			transition={{
+				duration: 0.3,
+				delay
+			}}
 			className='absolute flex flex-col justify-center items-center'
 		>
 			<p className='text-base tracking-wide text-cowboy-gray-600'>

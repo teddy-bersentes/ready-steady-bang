@@ -4,7 +4,7 @@ import { Dots } from "~/components/Dots"
 export function ReadyText() {
 	return (
 		<motion.p
-			className='absolute text-cowboy-gray-400'
+			className='absolute text-cowboy-gray-400 select-none'
 			initial={{ opacity: 0 }}
 			animate={{
 				opacity: 1,

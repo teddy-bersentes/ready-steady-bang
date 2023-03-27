@@ -11,20 +11,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<main className={clsx(uniFont.className, 'bg-cowboy-gray-50 antialiased text-cowboy-black-200')}>
 			<Head>
-				<title>Ready Steady Bang</title>
+				<title>ready steady bang</title>
 				<meta name="description" content="See who's the fastest gun in the west" />
-				<meta itemProp="name" content="Ready Steady Bang" />
+				<meta itemProp="name" content="ready steady bang" />
 				<meta itemProp="description" content="See who's the fastest gun in the west" />
 				<meta itemProp="image" content="https://ucarecdn.com/4ff39193-0ebd-4ff0-9a83-982a1a7f220e/og.png" />
 
 				<meta property="og:url" content="https://ready-steady-bang.onrender.com/" />
 				<meta property="og:type" content="website" />
-				<meta property="og:title" content="Ready Steady Bang" />
+				<meta property="og:title" content="ready steady bang" />
 				<meta property="og:description" content="See who's the fastest gun in the west" />
 				<meta property="og:image" content="https://ucarecdn.com/4ff39193-0ebd-4ff0-9a83-982a1a7f220e/og.png" />
 
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="Ready Steady Bang" />
+				<meta name="twitter:title" content="ready steady bang" />
 				<meta name="twitter:description" content="See who's the fastest gun in the west" />
 				<meta name="twitter:image" content="https://ucarecdn.com/4ff39193-0ebd-4ff0-9a83-982a1a7f220e/og.png" />
 				<link rel="icon" href="/favicon.ico" />
