@@ -88,7 +88,7 @@ export function RegisterPopup({ isOpen, onClose: closeModal, onSubmit }: Props) 
 									</button>
 								</div>
 
-								<div className='mt-2'>
+								<div className='mt-2 w-full'>
 									<Button disabled={isDisabled} onClick={onComplete}>
 										continue
 									</Button>

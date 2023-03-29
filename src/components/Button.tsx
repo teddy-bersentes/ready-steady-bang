@@ -57,7 +57,7 @@ function InnerContent({ children, disabled }: InnerContentProps) {
 		<>
 			<div className='bg-cowboy-gray-850 w-full h-full absolute rounded-lg translate-y-1.5' />
 			<div className={clsx(
-				'bg-cowboy-gray-650 z-10 flex px-5 py-3 rounded-lg transition-transform select-none text-white font-medium',
+				'bg-cowboy-gray-650 z-10 w-full flex text-center justify-center items-center px-5 py-3 rounded-lg transition-transform select-none text-white font-medium',
 				!disabled && 'group-active:translate-y-1.5'
 			)}>
 				{children}
