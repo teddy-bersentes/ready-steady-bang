@@ -7,7 +7,6 @@ import superjson from "superjson"
 import { trpc } from "~/utils/trpc"
 import Link from "next/link"
 
-
 export default function Index() {
 	const lobbyQuery = trpc.lobby.list.useQuery()
 
