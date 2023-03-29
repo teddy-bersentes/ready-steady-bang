@@ -35,11 +35,6 @@ export default function Index() {
 		})
 	}
 
-	const onLobby = async () => {
-		await checkForUser()
-		void router.push('/lobby')
-	}
-
 	const onDuel = async () => {
 		const userId = await checkForUser()
 		if (status !== 'idle') return
@@ -62,7 +57,7 @@ export default function Index() {
 				<MenuAnimation />
 			</Stage>
 
-			<Button disabled onClick={onLobby} className='mb-4'>
+			<Button disabled className='mb-4'>
 				public lobby
 			</Button>
 
