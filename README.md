@@ -6,6 +6,10 @@ Welcome to the GitHub repository of the online fan-made spin-off of the popular 
 
 This project is currently in development/pre-alpha stage and is not meant to infringe on any rights of the original creators ([Animade Studio](https://animade.tv/projects/cowboy-games)).
 
+##  ⚠️ Exciting Updates and Temporary Downtime
+
+I am thrilled to share that I have been exploring new avenues to expand and grow Ready Steady Bang Online into something even more amazing. While I cannot share explicit details at this time, rest assured that I have been working diligently, collaborating with others to create a comprehensive plan for significant enhancement. In the meantime, please be informed that the website is currently down and not functional as I focus on these exciting developments. I have not abandoned the project, but am instead aiming to bring a bigger and better experience to players in the future. Stay tuned for more updates as the exciting journey of Ready Steady Bang Online continues!
+
 ## Play the Game
 
 You can play the game by visiting [https://ready-steady-bang.onrender.com](https://ready-steady-bang.onrender.com).
